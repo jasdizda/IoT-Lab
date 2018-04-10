@@ -39,11 +39,11 @@ Content
 
 One semester allows for ~13 90min units.
 
-Unit 1 - Offline LED blinking
------------------------------
+Unit 1 - Introduction to the Lab: LED blinking in a LAN
+-------------------------------------------------------
 
 - Organization
-- Getting to know the hardware & software
+- Part 1: Getting to know the hardware & software
     - Let the students setup their code repository
     - Intro to the basics of lua and the NodeMCU programming
       model
@@ -51,10 +51,7 @@ Unit 1 - Offline LED blinking
     - Some easy adaption of the program to get used to the software
       like adding a button to toggle the LED
 
-Unit 2 - Online LED blinking
-----------------------------
-
-- Let the students write a program that sends an UDP packet
+- Part 2: Let the students write a program that sends an UDP packet
   to the server
     - The dashboard should display the metadata & payload of the packets
     - Adapt the program to send the packet upon
@@ -67,50 +64,42 @@ Unit 2 - Online LED blinking
     - Perform the same tasks as above
 - Maybe also show Multicast and Broadcast UDP
 
-Unit 3 - MQTT
--------------
+Unit 2 - Communication protocols: MQTT
+--------------------------------------
 
 - Show the differences between the previous client-server
   communication models and the MQTT broker based model
 - Let the students write MQTT message consumers and producers
   like light switches & light fixtures
-
-Unit 4 - Python & Async & MQTT
-------------------------------
-
 - Show the basics of the python language
 - Show the basics of modern async/await
   concurrent programming
 - Write an MQTT echo client that subscribes to one topic
   and publishes on another
-
-Unit 5 - Python & Async & HTTP
-------------------------------
-
-- Show the basics of HTML, HTTP and forms
-- Build a simple website that takes the status
-  of a button using MQTT and displays it
-- Build a website that allows changing the
-  state of a lamp using an html form
-
-Unit 5 - REST & JSON
---------------------
-
-- Show the RESTful principle and how it maps
-  to HTTP methods
-- Adapt the server from the last unit to expose
-  a restful interface
-
-Unit 6 - CoAP
--------------
+  
+Unit 3 - Communication protocols: CoAP
+--------------------------------------
 
 - Show the drawbacks of connection based protocols in
   resource constrained embedded applications
 - Add an CoAP interface to the server from the
   previous unit
 
-Unit 7 - Databases
-------------------
+Unit 4 - Communication protocols: REST HTTP & JSON using Spring
+---------------------------------------------------------------
+
+- Show the basics of HTML, HTTP and forms
+- Build a simple website that takes the status
+  of a button using MQTT and displays it
+- Build a website that allows changing the
+  state of a lamp using an html form
+- Show the RESTful principle and how it maps
+  to HTTP methods
+- Adapt the server from the last unit to expose
+  a restful interface
+
+Unit 6 - Data Storage using Spring Framework
+---------------------------------------------
 
 - Show the basic functionality of an SQL database
 - Show how an ORM like SQLObject can be used
@@ -119,46 +108,7 @@ Unit 7 - Databases
   from the previous unit
 - Also add a user database and basic authentication
 
-Unit 8 - TLS
-------------
-
-- Using packet dumps of the server from the previous
-  unit show why data may not be sent unencrypted via
-  the public internet
-- Show the basics of public key cryptography and the
-  certificate authority web of trust
-- Generate a keypair for tls and get it signed by
-  the tutor
-- Use the signed certificate to add https to
-  the server from the previous unit
-
-Unit 9 - TLS & Secure password storage
---------------------------------------
-
-- Put a root-of-trust certificate onto IoT device
-  running NodeMCU
-- Change the program on the IoT device to connect
-  to the MQTT Broker using TLS
-
-- Using a dump of the database file show why
-  passwords may not be stored in plaintext
-- Introduce the concept of password hashing
-- Adapt the webserver program to use a password
-  hashing library like passlib
-
-Unit 10 - Data routing and aggregation
---------------------------------------
-
-- Show that directly programming devices to publish/subscribe
-  to fixed topics to communicate between them is unflexible
-- Write a python program that links data sources and data sinks
-  like e.g. mqtt topics
-- "Dumb down" the NodeMCU programs to be simple
-  producers/subscribers
-- Add functionality to the python program to
-  send aggregated reports to a server using HTPP REST
-
-Unit 11, 12, 13 - Fog to Cloud project
+Unit 7 - mF2C project
 --------------------------------------
 
 - Each group is assigned a sensor/actor/routing/aggregation
